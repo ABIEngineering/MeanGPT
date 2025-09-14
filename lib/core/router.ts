@@ -107,40 +107,42 @@ export class MeanGPTRouter {
     const providers = ['openai', 'anthropic', 'gemini', 'grok'];
     const activeProviders = specificProviders || providers;
 
-    const responses = await Promise.all(
-      activeProviders.map(async (provider) => {
-        const context = await this.contextManager.getMessagesForProvider(
-          conversationId,
-          provider as 'openai' | 'anthropic' | 'gemini' | 'grok'
-        );
+    // Get context for the primary provider (usually first in list)
+    const primaryProvider = activeProviders[0];
+    const context = await this.contextManager.getMessagesForProvider(
+      conversationId,
+      primaryProvider as 'openai' | 'anthropic' | 'gemini' | 'grok'
+    );
 
-        const messages = [...context, { role: 'user', content: userMessage }] as Message[];
+    const messages = [...context, { role: 'user', content: userMessage }] as Message[];
 
-        const response = await this.orchestrator.querySingleProvider(provider, messages);
+    // Use the orchestrator's queryAllProviders which handles failures gracefully
+    const result = await this.orchestrator.queryAllProviders(messages, {
+      providers: activeProviders,
+      temperature: 0.7,
+      maxTokens: 4000
+    });
 
+    // Add messages to context for each provider
+    for (const provider of activeProviders) {
+      await this.contextManager.addAIMessage(
+        conversationId,
+        provider as 'openai' | 'anthropic' | 'gemini' | 'grok',
+        { role: 'user', content: userMessage }
+      );
+
+      // Find the response for this provider
+      const providerResponse = result.responses.find(r => r.provider.name === provider);
+      if (providerResponse && !providerResponse.error) {
         await this.contextManager.addAIMessage(
           conversationId,
           provider as 'openai' | 'anthropic' | 'gemini' | 'grok',
-          { role: 'user', content: userMessage }
+          { role: 'assistant', content: providerResponse.content }
         );
+      }
+    }
 
-        if (!response.error) {
-          await this.contextManager.addAIMessage(
-            conversationId,
-            provider as 'openai' | 'anthropic' | 'gemini' | 'grok',
-            { role: 'assistant', content: response.content }
-          );
-        }
-
-        return response;
-      })
-    );
-
-    return {
-      responses,
-      summary: {},
-      timestamp: new Date(),
-    };
+    return result;
   }
 
   async getConversationHistory(conversationId: string): Promise<Message[]> {
