@@ -439,7 +439,7 @@ export default function MeanGPTPage() {
                             hr: () => <hr className="my-6 border-t border-accent/30" />,
                             img: ({src, alt}) => {
                               // Check if this is an AI logo
-                              if (src && src.includes('AILogos')) {
+                              if (src && typeof src === 'string' && src.includes('AILogos')) {
                                 return (
                                   <img 
                                     src={src} 
