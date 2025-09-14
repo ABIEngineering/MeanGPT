@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757871679676_xpl2g7v6z",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what is the area of a rectangle"
+    },
+    {
+      "role": "assistant",
+      "content": "The area of a rectangle is calculated using the formula:\n\n**Area = length × width**\n\nWhere:\n- Length is the longer side of the rectangle\n- Width is the shorter side of the rectangle\n\nThe area will be expressed in square units (such as square inches, square feet, square meters, etc.).\n\nFor example:\n- If a rectangle has a length of 8 feet and width of 5 feet\n- Area = 8 × 5 = 40 square feet"
+    }
+  ],
+  "lastUpdated": "2025-09-14T17:41:24.959Z"
+}

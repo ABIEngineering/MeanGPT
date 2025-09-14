@@ -17,11 +17,9 @@ interface ConversationTurn {
 
 // Function to fix LaTeX syntax for proper math rendering
 function fixLatexSyntax(text: string): string {
-  // Convert [ \text{...} ] to $$ \text{...} $$
-  let fixed = text.replace(/\[\s*(\\text\{[^}]+\}\s*=\s*[^\\]*(?:\\[^\\]*)*)\s*\]/g, '$$$$1$$');
-  
-  // Convert other [ formula ] patterns to $$ formula $$
-  fixed = fixed.replace(/\[\s*([^[\]]*(?:\\[^[\]]*)*)\s*\]/g, '$$$$1$$');
+  // Only convert [ formula ] patterns that contain LaTeX commands (starting with backslash)
+  // This prevents converting image paths or other non-math brackets
+  let fixed = text.replace(/\[\s*(\\[^[\]]*)\s*\]/g, '$$$$1$$');
   
   return fixed;
 }
