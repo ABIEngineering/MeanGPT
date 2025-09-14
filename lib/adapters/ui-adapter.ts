@@ -39,10 +39,10 @@ export class UIAdapter {
   ): UIConversationTurn {
     const responses: UIAIResponse[] = [];
     
-    // Convert Map<string, BackendAIResponse> to UIAIResponse[]
-    aggregatedData.responses.forEach((aiResponse: BackendAIResponse, providerName: string) => {
+    // Convert AIResponse[] to UIAIResponse[]
+    aggregatedData.responses.forEach((aiResponse: BackendAIResponse) => {
       responses.push({
-        model: UIAdapter.formatProviderName(providerName),
+        model: UIAdapter.formatProviderName(aiResponse.provider.displayName),
         response: aiResponse.content,
         status: "complete"
       });
