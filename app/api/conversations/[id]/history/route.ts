@@ -18,7 +18,7 @@ export async function GET(
       );
     }
 
-    const history = router.getConversationHistory(conversationId);
+    const history = await router.getConversationHistory(conversationId);
 
     return NextResponse.json({
       success: true,
