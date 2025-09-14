@@ -43,7 +43,7 @@ class MeanGPTTester {
       }
       
       if (trimmed === '/history') {
-        this.showHistory();
+        await this.showHistory();
         this.promptUser();
         return;
       }
@@ -108,8 +108,8 @@ class MeanGPTTester {
     }
   }
 
-  private showHistory() {
-    const history = this.router.getConversationHistory(this.conversationId);
+  private async showHistory() {
+    const history = await this.router.getConversationHistory(this.conversationId);
     
     console.log('\n📚 Conversation History:');
     console.log('========================');
