@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757866680789_mpq5gglo4",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who invented the sterling engine"
+    },
+    {
+      "role": "assistant",
+      "content": "The Stirling engine was invented by **Robert Stirling**, a Scottish clergyman and engineer, in 1816. He received a patent for his \"hot air engine\" on September 27, 1816.\n\nStirling developed this engine as a safer alternative to steam engines, which were prone to dangerous boiler explosions at the time. His engine operates on a closed cycle using heated air (or other gas) that expands and contracts to drive a piston, without the need for high-pressure steam.\n\nWhile Robert Stirling invented the basic concept, his brother **James Stirling** later made important improvements to the design, helping to make it more practical for commercial use.\n\nThe Stirling engine is notable for being an external combustion engine that can run on virtually any heat source and is known for its quiet operation and high efficiency."
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:18:10.253Z"
+}

@@ -1,0 +1,12 @@
+{
+  "conversationId": "conv_1757866189907_0l8dlyo97",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who invented the steam engine"
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:11:50.324Z"
+}

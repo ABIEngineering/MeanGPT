@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757549581713_0843g6q79",
+  "provider": "grok",
+  "model": "grok-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the capital of France?"
+    },
+    {
+      "role": "assistant",
+      "content": "The capital of France is Paris."
+    }
+  ],
+  "lastUpdated": "2025-09-11T00:57:47.796Z"
+}

@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757549581713_0843g6q79",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the capital of France?"
+    },
+    {
+      "role": "assistant",
+      "content": "Paris"
+    }
+  ],
+  "lastUpdated": "2025-09-11T00:57:48.159Z"
+}

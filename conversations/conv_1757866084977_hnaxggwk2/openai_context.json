@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757866084977_hnaxggwk2",
+  "provider": "openai",
+  "model": "gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who invented trigonometry"
+    },
+    {
+      "role": "assistant",
+      "content": "Trigonometry was not invented by a single individual but developed over time by various mathematicians across different cultures. The ancient Greeks, particularly Hipparchus (around 190–120 BCE), are often credited with significant early contributions, including the creation of the first trigonometric table. The Indian mathematician Aryabhata (476–550 CE) later made important advancements. Trigonometry continued to evolve through the work of Islamic scholars like Al-Battani and Al-Khwarizmi during the Middle Ages."
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:08:12.793Z"
+}

@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757866812773_bc7xi0r3o",
+  "provider": "openai",
+  "model": "gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who invented the laser"
+    },
+    {
+      "role": "assistant",
+      "content": "The laser was invented by Theodore H. Maiman. He successfully demonstrated the first working laser on May 16, 1960, at Hughes Research Laboratories in California. His laser was a ruby laser, which used a synthetic ruby crystal as the gain medium."
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:20:19.583Z"
+}

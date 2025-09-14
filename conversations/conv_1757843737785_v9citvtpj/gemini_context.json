@@ -1,0 +1,12 @@
+{
+  "conversationId": "conv_1757843737785_v9citvtpj",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I am creating a software that use API calls to an AI company such as chatgpt model: 4o, to create a sort of chat model similar to chaptgpt, and i wnat to display the results in a leter by leter typing effect similar to how chatgpt does it. can you please tell me the best way to do it with example. i am using Next.js react and type screipt"
+    }
+  ],
+  "lastUpdated": "2025-09-14T09:55:53.935Z"
+}

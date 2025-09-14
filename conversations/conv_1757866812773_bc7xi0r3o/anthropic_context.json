@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757866812773_bc7xi0r3o",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who invented the laser"
+    },
+    {
+      "role": "assistant",
+      "content": "The laser was invented by **Theodore Maiman** in 1960. He created the first working laser at Hughes Research Laboratories in California, using a ruby crystal as the lasing medium.\n\nHowever, the theoretical foundation for lasers was laid earlier by **Albert Einstein** in 1917 with his theory of stimulated emission. The acronym \"LASER\" (Light Amplification by Stimulated Emission of Radiation) was coined by **Gordon Gould** in 1957, who also contributed significantly to laser development, though his patent battles with other inventors lasted for decades.\n\nOther key contributors include **Charles Townes** and **Arthur Schawlow**, who published important theoretical work on optical lasers in 1958 and shared the Nobel Prize in Physics in 1981 for their contributions to laser spectroscopy."
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:20:24.756Z"
+}

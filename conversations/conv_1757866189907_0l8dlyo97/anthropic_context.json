@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757866189907_0l8dlyo97",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who invented the steam engine"
+    },
+    {
+      "role": "assistant",
+      "content": "The steam engine wasn't invented by a single person, but evolved through contributions from several inventors:\n\n**Key figures include:**\n\n- **Hero of Alexandria** (1st century AD) - Created the first recorded steam-powered device, the aeolipile, though it was more of a novelty than practical engine\n\n- **Thomas Savery** (1698) - Built the first commercially used steam engine for pumping water out of mines\n\n- **Thomas Newcomen** (1712) - Developed the first practical and widely-used steam engine, significantly improving on Savery's design\n\n- **James Watt** (1769) - Made crucial improvements to Newcomen's engine, including the separate condenser, making steam engines much more efficient and practical for various applications\n\nWhile Watt is often credited as the \"inventor\" of the steam engine, he actually improved upon existing designs. His innovations were so significant that they enabled the widespread adoption of steam power during the Industrial Revolution."
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:11:55.306Z"
+}

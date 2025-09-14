@@ -1,0 +1,24 @@
+{
+  "conversationId": "conv_1757866904935_ni6yernkj",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the renting cost of  a studio apartement in koumassi abidjan. i want average prices please."
+    },
+    {
+      "role": "assistant",
+      "content": "The average renting cost for a studio apartment in Koumassi, Abidjan, typically ranges from **50,000 XOF to 120,000 XOF per month**.\n\nThis is approximately **$80 to $200 USD** (as of early 2024, exchange rates can vary).\n\nThe exact price depends on factors such as:\n*   **Specific location within Koumassi** (some areas are more sought after)\n*   **Condition and age of the apartment**\n*   **Included amenities** (e.g., air conditioning, hot water, security)\n*   **Size**"
+    },
+    {
+      "role": "user",
+      "content": "how about a 1 bedroom apartement, a chambre salon as they call it"
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, for a **1-bedroom apartment** (chambre salon) in Koumassi, Abidjan, you can expect the average renting cost to be in the range of **70,000 XOF to 180,000 XOF per month**.\n\nThis is approximately **$115 to $300 USD** (again, based on current exchange rates, which can fluctuate).\n\nSimilar to studios, the price is influenced by:\n*   **Exact neighborhood within Koumassi**\n*   **Modernity and condition of the building/apartment**\n*   **Presence of amenities** (e.g., generator, water heater, parking, security)\n*   **Overall size and layout**"
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:23:24.675Z"
+}

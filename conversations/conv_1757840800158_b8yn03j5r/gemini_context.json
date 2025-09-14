@@ -1,0 +1,12 @@
+{
+  "conversationId": "conv_1757840800158_b8yn03j5r",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you please tell me what is the best way to code the typing letter by letter effect that chat gpt has when displaying text, as if they AI is typing out the response. i am creating my own AI that calls the API of openAI chatgpt4o but i want the response to be displayed in the same way as chatgpt. i am using next.js and type script and react. can you please let me know the best method to do it with example. "
+    }
+  ],
+  "lastUpdated": "2025-09-14T09:07:02.697Z"
+}

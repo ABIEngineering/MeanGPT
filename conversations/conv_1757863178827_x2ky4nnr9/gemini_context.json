@@ -1,0 +1,12 @@
+{
+  "conversationId": "conv_1757863178827_x2ky4nnr9",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the size of lebanon in m2"
+    }
+  ],
+  "lastUpdated": "2025-09-14T15:19:42.576Z"
+}

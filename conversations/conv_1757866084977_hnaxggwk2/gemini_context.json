@@ -1,0 +1,12 @@
+{
+  "conversationId": "conv_1757866084977_hnaxggwk2",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who invented trigonometry"
+    }
+  ],
+  "lastUpdated": "2025-09-14T16:08:10.165Z"
+}

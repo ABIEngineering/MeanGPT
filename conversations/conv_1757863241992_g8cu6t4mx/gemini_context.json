@@ -1,0 +1,24 @@
+{
+  "conversationId": "conv_1757863241992_g8cu6t4mx",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who invented calculus"
+    },
+    {
+      "role": "user",
+      "content": "who is generally considered smarter"
+    },
+    {
+      "role": "user",
+      "content": "who is the most famous muslim mathematician"
+    },
+    {
+      "role": "user",
+      "content": "is it  true that there was a muslim scholar that had already invented calclus befor and the others were copying him"
+    }
+  ],
+  "lastUpdated": "2025-09-14T15:28:52.065Z"
+}
