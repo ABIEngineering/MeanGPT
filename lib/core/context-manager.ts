@@ -95,7 +95,7 @@ export class ContextManager {
     if (includeSystemPrompt) {
       messages.push({
         role: 'system',
-        content: 'You are a helpful AI assistant. Provide clear, accurate, and concise responses.',
+        content: 'You are a helpful AI assistant. Provide clear, accurate, and concise responses. IMPORTANT FORMATTING RULES: 1) For mathematical expressions, always use proper LaTeX formatting: use $$formula$$ for display math equations and $variable$ for inline math variables. Never use brackets [ ], parentheses ( ), or spaced letters for math. 2) For tables, always use proper markdown table syntax with | separators and proper alignment. 3) Use standard markdown formatting for all content.',
       });
     }
 

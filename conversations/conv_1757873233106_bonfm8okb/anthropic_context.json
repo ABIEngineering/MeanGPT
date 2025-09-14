@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757873233106_bonfm8okb",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quelle est la valeur de luminosité recommandée en lux ou en lumens pour un mètre carré selon les normes françaises, s'il vous plaît ?"
+    },
+    {
+      "role": "assistant",
+      "content": "En France, les normes d'éclairage sont principalement définies par la norme **NF EN 12464-1** qui spécifie les exigences en **lux** (lumens par mètre carré). Voici les principales recommandations :\n\n## Éclairage intérieur (bureaux et espaces de travail)\n\n- **Bureaux généraux** : 500 lux\n- **Lecture, écriture** : 500 lux\n- **Travail de précision** : 750 à 1000 lux\n- **Dessin technique** : 750 lux\n- **Salles de réunion** : 500 lux\n- **Couloirs** : 100 à 150 lux\n\n## Éclairage résidentiel\n\n- **Salon** : 100 à 300 lux\n- **Cuisine (plan de travail)** : 500 lux\n- **Chambre** : 100 à 200 lux\n- **Salle de bain (miroir)** : 500 lux\n\n## Éclairage extérieur\n\n- **Voies piétonnes** : 10 à 20 lux\n- **Parkings** : 20 à 50 lux\n- **Entrées de bâtiments** : 50 à 100 lux\n\n## Conversion lux/lumens\n\nLe **lux** est l'unité de mesure de l'éclairement (lumens par m²) :\n- 1 lux = 1 lumen/m²\n\nCes valeurs sont des minimums recommandés et peuvent varier selon l'activité spécifique et les conditions d'usage."
+    }
+  ],
+  "lastUpdated": "2025-09-14T18:07:35.329Z"
+}

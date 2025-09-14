@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757873081522_kb6p6vbqe",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the area of a rectangle"
+    },
+    {
+      "role": "assistant",
+      "content": "The area of a rectangle is calculated by multiplying its length by its width.\n\n$$A = l \\times w$$\n\nWhere:\n*   $A$ is the area\n*   $l$ is the length\n*   $w$ is the width"
+    }
+  ],
+  "lastUpdated": "2025-09-14T18:04:53.294Z"
+}

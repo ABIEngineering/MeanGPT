@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757873081522_kb6p6vbqe",
+  "provider": "openai",
+  "model": "gpt-4o",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the area of a rectangle"
+    },
+    {
+      "role": "assistant",
+      "content": "The area of a rectangle can be calculated using the formula:\n\n$$\nA = l \\times w\n$$\n\nwhere \\( A \\) is the area, \\( l \\) is the length, and \\( w \\) is the width of the rectangle."
+    }
+  ],
+  "lastUpdated": "2025-09-14T18:04:53.288Z"
+}

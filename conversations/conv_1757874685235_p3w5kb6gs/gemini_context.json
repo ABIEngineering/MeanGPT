@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757874685235_p3w5kb6gs",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quelle est la valeur de luminosité recommandée en lux ou en lumens pour un mètre carré selon les normes françaises, s'il vous plaît ?"
+    },
+    {
+      "role": "assistant",
+      "content": "La valeur de luminosité recommandée est exprimée en lux ($1 \\text{ lx} = 1 \\text{ lm/m}^2$), qui représente le nombre de lumens par mètre carré. Il n'existe pas une unique valeur recommandée, car celle-ci dépend fortement du type d'activité et de l'environnement.\n\nEn France, les recommandations s'appuient principalement sur la norme européenne **NF EN 12464-1** (Éclairage des lieux de travail intérieurs) pour les environnements professionnels. Voici quelques exemples de valeurs d'éclairement minimales recommandées pour différents types de lieux et d'activités :\n\n| Activité ou Lieu                      | Éclairement Recommandé (lux) |\n| :------------------------------------ | :--------------------------- |\n| Zones de circulation, couloirs, escaliers | $100$                        |\n| Zones d'archives, de stockage         | $200$                        |\n| Bureaux (travail général, lecture, saisie) | $500$                        |\n| Bureaux (travail de précision, dessin technique) | $750$                        |\n| Salles de classe (général)            | $300$                        |\n| Salles de classe (sur les bureaux)    | $500$                        |\n| Ateliers (travaux grossiers)          | $200$                        |\n| Ateliers (travaux moyens)             | $300$                        |\n| Ateliers (travaux fins)               | $500$                        |\n| Commerces (zone de vente générale)    | $300$                        |\n\n**Points importants :**\n*   Ces valeurs représentent des moyennes ou des minimums sur le plan de travail ou la zone concernée.\n*   Pour des tâches très spécifiques ou des personnes ayant des besoins visuels particuliers, un éclairage d'appoint peut être nécessaire pour atteindre des niveaux plus élevés."
+    }
+  ],
+  "lastUpdated": "2025-09-14T18:31:44.091Z"
+}

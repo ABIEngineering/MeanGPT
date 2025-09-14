@@ -1,0 +1,16 @@
+{
+  "conversationId": "conv_1757874685235_p3w5kb6gs",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-20250514",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quelle est la valeur de luminosité recommandée en lux ou en lumens pour un mètre carré selon les normes françaises, s'il vous plaît ?"
+    },
+    {
+      "role": "assistant",
+      "content": "En France, les recommandations d'éclairage sont principalement exprimées en **lux** (lumens par mètre carré) selon les normes NF EN 12464-1 et NF EN 12464-2. Voici les principales valeurs :\n\n## Éclairage intérieur (NF EN 12464-1)\n\n| Type de local/activité | Éclairement recommandé |\n|------------------------|----------------------|\n| Circulation, couloirs | 100 lux |\n| Escaliers | 150 lux |\n| Bureaux - travail sur écran | 500 lux |\n| Bureaux - écriture/lecture | 500-750 lux |\n| Salles de réunion | 500 lux |\n| Cuisines domestiques | 500 lux |\n| Salles de bains | 200 lux |\n| Chambres | 200 lux |\n| Salons | 200 lux |\n\n## Éclairage extérieur (NF EN 12464-2)\n\n| Zone | Éclairement recommandé |\n|------|----------------------|\n| Voies piétonnes | 10-20 lux |\n| Parkings | 20 lux |\n| Entrées de bâtiments | 50 lux |\n\n## Points importants :\n\n- **1 lux = 1 lumen/m²**\n- Les valeurs peuvent varier selon l'âge des occupants (+50% pour les personnes âgées)\n- L'uniformité de l'éclairage est aussi importante que la quantité\n- Ces normes sont des recommandations, pas des obligations légales sauf dans certains ERP (Établissements Recevant du Public)\n\nPour convertir des lumens en lux, il faut connaître la surface éclairée : **Lux = Lumens ÷ Surface (m²)**"
+    }
+  ],
+  "lastUpdated": "2025-09-14T18:31:44.089Z"
+}

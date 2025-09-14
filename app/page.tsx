@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import remarkGfm from 'remark-gfm'
 import 'katex/dist/katex.min.css'
 
 interface ConversationTurn {
@@ -15,14 +16,7 @@ interface ConversationTurn {
   isLoading: boolean
 }
 
-// Function to fix LaTeX syntax for proper math rendering
-function fixLatexSyntax(text: string): string {
-  // Only convert [ formula ] patterns that contain LaTeX commands (starting with backslash)
-  // This prevents converting image paths or other non-math brackets
-  let fixed = text.replace(/\[\s*(\\[^[\]]*)\s*\]/g, '$$$$1$$');
-  
-  return fixed;
-}
+// Math rendering is now handled by proper system prompts instructing AIs to use correct LaTeX format
 
 export default function MeanGPTPage() {
   const [question, setQuestion] = useState("")
@@ -439,7 +433,7 @@ export default function MeanGPTPage() {
                     ) : (
                       <div className="prose prose-invert prose-lg max-w-none text-foreground leading-relaxed w-full overflow-visible">
                         <ReactMarkdown 
-                          remarkPlugins={[remarkMath]}
+                          remarkPlugins={[remarkMath, remarkGfm]}
                           rehypePlugins={[rehypeRaw, rehypeKatex]}
                           components={{
                             h1: ({children}) => <h1 className="text-2xl font-bold text-foreground mb-4">{children}</h1>,
@@ -484,9 +478,15 @@ export default function MeanGPTPage() {
                               return <strong className="font-bold" style={{color}}>{children}</strong>;
                             },
                             em: ({children}) => <em className="italic text-foreground">{children}</em>,
+                            table: ({children}) => <table className="min-w-full border-collapse border-2 border-accent my-4 rounded-lg overflow-hidden shadow-lg" style={{borderColor: 'rgb(var(--accent))'}}>{children}</table>,
+                            thead: ({children}) => <thead className="bg-accent/20 border-b-2 border-accent/60">{children}</thead>,
+                            tbody: ({children}) => <tbody>{children}</tbody>,
+                            tr: ({children}) => <tr className="border-b border-accent/40 hover:bg-accent/10 transition-colors">{children}</tr>,
+                            th: ({children}) => <th className="border-r border-accent/40 px-4 py-3 text-left font-semibold text-foreground last:border-r-0">{children}</th>,
+                            td: ({children}) => <td className="border-r border-accent/40 px-4 py-3 text-foreground last:border-r-0">{children}</td>,
                           }}
                         >
-                          {fixLatexSyntax(turn.answer)}
+                          {turn.answer}
                         </ReactMarkdown>
                       </div>
                     )}
