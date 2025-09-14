@@ -34,7 +34,7 @@ async function testContextManager() {
 
   // Test 3: Get master context
   console.log('\n📝 Test 3: Getting master context...');
-  const masterContext = contextManager.getMasterContext(conversation.id);
+  const masterContext = await contextManager.getMasterContext(conversation.id);
   console.log('✅ Master context retrieved');
   console.log(`   Messages count: ${masterContext.length}`);
   masterContext.forEach((msg, i) => {
