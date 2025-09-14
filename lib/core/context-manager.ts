@@ -6,9 +6,12 @@ export class ContextManager {
   private maxMessagesPerContext = 20;
   private maxTokensPerContext = 12000;
   private fileStorage: FileStorageManager;
+  private isServerless: boolean;
 
   constructor() {
     this.fileStorage = new FileStorageManager();
+    // Detect if running in serverless environment (like Vercel)
+    this.isServerless = process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
   }
 
   createConversation(id?: string): ConversationContext {
@@ -62,12 +65,14 @@ export class ContextManager {
 
     this.trimAIContextIfNeeded(conversation.aiContexts[provider]);
 
-    // Save to file storage
-    await this.fileStorage.saveProviderContext(
-      conversationId,
-      provider,
-      conversation.aiContexts[provider]
-    );
+    // Save to file storage (skip in serverless environments)
+    if (!this.isServerless) {
+      await this.fileStorage.saveProviderContext(
+        conversationId,
+        provider,
+        conversation.aiContexts[provider]
+      );
+    }
   }
 
   async getMessagesForProvider(
@@ -77,8 +82,8 @@ export class ContextManager {
   ): Promise<Message[]> {
     let conversation = this.conversations.get(conversationId);
     
-    // If not in memory, try to load from file storage
-    if (!conversation) {
+    // If not in memory, try to load from file storage (skip in serverless)
+    if (!conversation && !this.isServerless) {
       const exists = await this.fileStorage.conversationExists(conversationId);
       if (exists) {
         conversation = await this.loadConversationFromStorage(conversationId);
@@ -140,8 +145,8 @@ export class ContextManager {
   async getMasterContext(conversationId: string): Promise<Message[]> {
     let conversation = this.conversations.get(conversationId);
     
-    // If not in memory, try to load from file storage
-    if (!conversation) {
+    // If not in memory, try to load from file storage (skip in serverless)
+    if (!conversation && !this.isServerless) {
       const exists = await this.fileStorage.conversationExists(conversationId);
       if (exists) {
         conversation = await this.loadConversationFromStorage(conversationId);
