@@ -52,7 +52,7 @@ async function testContextManager() {
   ];
 
   for (const testCase of testCases) {
-    const routing = contextManager.shouldForwardToAIs(conversation.id, testCase);
+    const routing = await contextManager.shouldForwardToAIs(conversation.id, testCase);
     console.log(`   "${testCase}"`);
     console.log(`     Forward: ${routing.shouldForward ? '✅' : '❌'}`);
     console.log(`     Reason: ${routing.reason}`);
@@ -122,7 +122,7 @@ async function testRoutingLogic() {
 
   let passed = 0;
   for (const scenario of testScenarios) {
-    const routing = contextManager.shouldForwardToAIs(conversationId, scenario.message);
+    const routing = await contextManager.shouldForwardToAIs(conversationId, scenario.message);
     const testPassed = routing.shouldForward === scenario.expectedForward;
     
     console.log(`📋 ${scenario.name}:`);
