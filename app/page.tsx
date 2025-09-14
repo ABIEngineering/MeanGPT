@@ -15,6 +15,17 @@ interface ConversationTurn {
   isLoading: boolean
 }
 
+// Function to fix LaTeX syntax for proper math rendering
+function fixLatexSyntax(text: string): string {
+  // Convert [ \text{...} ] to $$ \text{...} $$
+  let fixed = text.replace(/\[\s*(\\text\{[^}]+\}\s*=\s*[^\\]*(?:\\[^\\]*)*)\s*\]/g, '$$$$1$$');
+  
+  // Convert other [ formula ] patterns to $$ formula $$
+  fixed = fixed.replace(/\[\s*([^[\]]*(?:\\[^[\]]*)*)\s*\]/g, '$$$$1$$');
+  
+  return fixed;
+}
+
 export default function MeanGPTPage() {
   const [question, setQuestion] = useState("")
   const [conversationHistory, setConversationHistory] = useState<ConversationTurn[]>([])
@@ -477,7 +488,7 @@ export default function MeanGPTPage() {
                             em: ({children}) => <em className="italic text-foreground">{children}</em>,
                           }}
                         >
-                          {turn.answer}
+                          {fixLatexSyntax(turn.answer)}
                         </ReactMarkdown>
                       </div>
                     )}
