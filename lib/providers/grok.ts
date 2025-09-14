@@ -2,7 +2,7 @@ import { BaseAIProvider } from './base';
 import { Message, AIResponse } from '@/types';
 
 export class GrokProvider extends BaseAIProvider {
-  constructor(apiKey: string, model: string = 'grok-beta') {
+  constructor(apiKey: string, model: string = 'grok-2-1212') {
     super(apiKey, model, {
       name: 'grok',
       displayName: 'xAI Grok',

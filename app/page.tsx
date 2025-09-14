@@ -5,6 +5,9 @@ import { useState, useRef, useEffect } from "react"
 import { PenBoxIcon } from "lucide-react"
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
 
 interface ConversationTurn {
   question: string
@@ -427,7 +430,8 @@ export default function MeanGPTPage() {
                     ) : (
                       <div className="prose prose-invert prose-lg max-w-none text-foreground leading-relaxed w-full overflow-visible">
                         <ReactMarkdown 
-                          rehypePlugins={[rehypeRaw]}
+                          remarkPlugins={[remarkMath]}
+                          rehypePlugins={[rehypeRaw, rehypeKatex]}
                           components={{
                             h1: ({children}) => <h1 className="text-2xl font-bold text-foreground mb-4">{children}</h1>,
                             h2: ({children}) => <h2 className="text-xl font-semibold text-foreground mb-3 mt-6">{children}</h2>,

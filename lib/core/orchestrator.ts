@@ -42,7 +42,7 @@ export class AIOrchestrator {
     if (grokKey) {
       this.providers.set('grok', new GrokProvider(
         grokKey,
-        process.env.GROK_MODEL || 'grok-beta'
+        process.env.GROK_MODEL || 'grok-2-1212'
       ));
     }
   }
