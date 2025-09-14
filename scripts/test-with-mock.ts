@@ -73,7 +73,7 @@ async function testContextManager() {
     content: 'OpenAI response'
   });
 
-  const openaiContext = contextManager.getMessagesForProvider(conversation.id, 'openai');
+  const openaiContext = await contextManager.getMessagesForProvider(conversation.id, 'openai');
   console.log('✅ AI-specific context working');
   console.log(`   OpenAI context messages: ${openaiContext.length}`);
 
